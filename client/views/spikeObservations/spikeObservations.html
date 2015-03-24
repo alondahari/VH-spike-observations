@@ -1,0 +1,32 @@
+<head>
+  <title>Spike Observations</title>
+</head>
+
+<body>
+
+  {{> spikeObservations}}
+</body>
+
+<template name="spikeObservations">
+	<form action="">
+		<ul>
+			{{#each spikeBehaviors}}
+				{{> spikeBehavior}}
+			{{/each}}
+		</ul>		
+	
+		<input type="submit" class="btn btn-primary">
+	</form>
+
+
+
+</template>
+
+<template name="spikeBehavior">
+	<li>
+		{{behavior}}
+		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}">
+		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}">
+	</li>
+
+</template>
