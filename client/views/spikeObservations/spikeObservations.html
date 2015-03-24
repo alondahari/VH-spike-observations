@@ -23,10 +23,17 @@
 </template>
 
 <template name="spikeBehavior">
-	<li>
-		{{behavior}}
-		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}" value="false">
-		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}" value="true">
-	</li>
 
+	<li>
+		
+  	<p class="spike-behavior">{{behavior}}</p>
+    <div class="switch">
+      <input type="radio" class="switch-input" name="focus-observation-{{behavior}}" value="true" id="focus-observation-true-{{behavior}}">
+      <label for="focus-observation-true-{{behavior}}" class="switch-label switch-label-off">YES</label>
+      <input type="radio" class="switch-input" name="focus-observation-{{behavior}}" value="false" id="focus-observation-false-{{behavior}}">
+      <label for="focus-observation-false-{{behavior}}" class="switch-label switch-label-on">NO</label>
+      <span class="switch-selection"></span>
+    </div>
+
+	</li>
 </template>
