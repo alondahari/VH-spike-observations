@@ -8,14 +8,14 @@
 </body>
 
 <template name="spikeObservations">
-	<form action="">
+	<form id="spike-behaviors-form">
 		<ul>
 			{{#each spikeBehaviors}}
 				{{> spikeBehavior}}
 			{{/each}}
 		</ul>		
 	
-		<input type="submit" class="btn btn-primary">
+		<input type="submit" class="btn btn-primary" id="submit-spike-behaviors">
 	</form>
 
 
@@ -25,8 +25,8 @@
 <template name="spikeBehavior">
 	<li>
 		{{behavior}}
-		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}">
-		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}">
+		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}" value="false">
+		<input type="radio" class="focus-observation-radio" name="focus-observation-{{behavior}}" value="true">
 	</li>
 
 </template>
